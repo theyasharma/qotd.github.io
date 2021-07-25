@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QOTD</title>
+</head>
+<style>
+    body {
+        background-color: #98b4d4;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 37px;
+        color: yellow
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        transition: 2s;
+        padding: 20px;
+        border-bottom: 5px solid yellow;
+        border-top: 5px solid yellow;
+    }
+
+    p {
+        font-size: 27px;
+    }
+
+    button:hover {
+        transform: scale(1.5);
+        border-radius: 50px;
+        background-color: yellow;
+        color: black;
+        font-style: bold;
+
+    }
+
+    hr {
+        color: yellow;
+        width: 50%;
+    }
+</style>
+
+<body>
+
+    <div>
+        <h1>QUOTE OF THE DAY</h1>
+        <hr>
+        <p>CLICK THIS BUTTON TO SEE TODAY'S QUOTE</p>
+
+        <button onclick="generate()">NEW QUOTE</button>
+    </div>
+    <div>
+        <p id="output"></p>
+        <p id="author"></p>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var arrayQ = [
+            {
+                author: "Louis L’Amour",
+                quote: "Start writing, no matter what. The water does not flow until the faucet is turned on."
+
+            },
+            {
+                author: "William Faulkner",
+                quote: "Get it down. Take chances. It may be bad, but it's the only way you can do anything really good."
+
+            },
+            {
+                author: "Terry Pratchett",
+                quote: "The first draft is just you telling yourself the story."
+
+            },
+            {
+                author: "Octavia E. Butler",
+                quote: "You don’t start out writing good stuff. You start out writing crap and thinking it’s good stuff, and then gradually you get better at it."
+
+            },
+            {
+                author: "Steven Pressfield",
+                quote: "Start before you’re ready."
+
+            },
+            {
+                author: "Jodi Picoult ",
+                quote: "You can always edit a bad page. You can’t edit a blank page"
+
+            },
+            {
+                author: " Robert Frost",
+                quote: "I have never started a poem yet whose end I knew. Writing a poem is discovering."
+
+            },
+            {
+                author: "Jack London",
+                quote: "You can’t wait for inspiration. You have to go after it with a club."
+
+            },
+            {
+                author: "Toni Morrison",
+                quote: "If there's a book that you want to read, but it hasn't been written yet, then you must write it."
+
+            },
+
+            {
+                author: "E. L. Doctorow",
+                quote: "Writing a novel is like driving a car at night. You can only see as far as your headlights, but you can make the whole trip that way."
+
+            }
+        ];
+
+
+
+
+        function generate() {
+            var num;
+            var num = Math.floor(Math.random() * 10);
+
+
+            document.getElementById("output").innerHTML = arrayQ[num].quote;
+
+            document.getElementById("author").innerHTML = "-" + arrayQ[num].author;
+
+        }
+
+    </script>
+</body>
+
+</html>
